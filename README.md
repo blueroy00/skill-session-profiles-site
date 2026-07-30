@@ -3,6 +3,9 @@
 Promotional website for
 [Skill Session Profiles](https://github.com/blueroy00/skill-session-profiles).
 
+The site tracks the current `v0.2.0` product interface and links directly to
+the Apple Silicon DMG published on GitHub Releases.
+
 ## Development
 
 ```bash

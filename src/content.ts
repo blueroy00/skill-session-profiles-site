@@ -1,5 +1,5 @@
 export type Locale = "zh" | "en";
-export type GalleryKey = "tasks" | "profiles" | "dark";
+export type GalleryKey = "tasks" | "projects" | "profiles" | "dark";
 
 export const copy = {
   zh: {
@@ -16,23 +16,23 @@ export const copy = {
     },
     hero: {
       title: "Skill Session Profiles",
-      body: "为不同 Codex 任务配置不同 Skill，并让设置在后续会话中持续生效。",
+      body: "按任务或项目配置 Codex Skill，并让明确的设置在后续会话中持续生效。",
       primary: "查看源码",
-      secondary: "获取 macOS 版本",
+      secondary: "下载 v0.2.0",
       imageAlt: "Skill Session Profiles 任务配置界面",
     },
     statement: {
-      title: "从全局默认，到每一个任务。",
-      body: "把 Skill 选择从临时操作变成可复用、可预测的工作方式。",
+      title: "从全局默认，到每一个项目。",
+      body: "把 Skill 选择变成可复用方案，并为具体项目保留清晰、可预测的覆盖。",
     },
     capabilities: [
       {
         title: "任务配置",
-        body: "为后续打开的 Codex 任务选择一套基础方案，并按需覆盖单个 Skill。",
+        body: "在同一界面选择、创建和管理方案，再明确应用到后续 Codex 任务。",
       },
       {
-        title: "可复用方案",
-        body: "保存不同工作类型的 Skill 组合，避免在每次对话前重复设置。",
+        title: "项目配置",
+        body: "从 Codex 项目列表选择目标，把显式覆盖保存到对应项目根目录。",
       },
       {
         title: "全局默认",
@@ -44,30 +44,33 @@ export const copy = {
       },
     ],
     gallery: {
-      title: "看见配置，也看见它如何生效。",
-      body: "搜索、筛选、批量调整，再把明确的单项覆盖保存为方案。",
+      title: "一套界面，分清每层作用范围。",
+      body: "管理全局方案或项目覆盖，并在保存前看清每个 Skill 的最终设置。",
       tabs: {
         tasks: "任务配置",
-        profiles: "配置方案",
+        projects: "项目配置",
+        profiles: "方案编辑",
         dark: "黑夜模式",
       },
       captions: {
-        tasks: "为后续任务应用一套持续配置。",
-        profiles: "管理可复用方案和单项覆盖。",
+        tasks: "直接在任务配置中选择、导入、导出或应用方案。",
+        projects: "按 Codex 项目列表选择根目录并保存项目专属覆盖。",
+        profiles: "编辑可复用模板；保存方案与应用配置保持为两个动作。",
         dark: "在深色环境中保持清晰的信息层级。",
       },
       alts: {
         tasks: "任务配置界面",
-        profiles: "配置方案编辑界面",
+        projects: "Codex 项目配置界面",
+        profiles: "任务配置内的方案编辑界面",
         dark: "黑夜模式任务配置界面",
       },
     },
     workflow: {
-      title: "配置一次，沿用到后续任务。",
+      title: "选定范围，再让配置持续生效。",
       items: [
         {
           title: "发现",
-          body: "自动读取当前可用的用户、仓库与系统 Skill。",
+          body: "自动读取 Codex 项目列表，以及当前可用的用户、仓库与系统 Skill。",
         },
         {
           title: "组合",
@@ -75,13 +78,13 @@ export const copy = {
         },
         {
           title: "沿用",
-          body: "应用方案后，后续新建、重开或派生的任务继续使用它。",
+          body: "应用全局方案，或保存项目覆盖；后续新建、重开或派生的任务按范围读取。",
         },
       ],
     },
     local: {
       title: "本地优先，规则透明。",
-      body: "配置通过 Codex App Server API 写入，不直接修改 config.toml。项目开源，数据保存在你的设备上。",
+      body: "所有写入都经过 Codex App Server API。方案数据保存在本地，项目覆盖写入对应的 .codex/config.toml。",
       pathLabel: "本地数据目录",
       path: "~/.codex/skill-session-profiles",
       source: "阅读实现",
@@ -95,7 +98,11 @@ export const copy = {
         },
         {
           question: "方案会覆盖全局默认吗？",
-          answer: "只覆盖明确设置为启用或停用的 Skill。其他项目继续继承全局默认。",
+          answer: "保存方案只更新模板。选择并应用后，只有明确启用或停用的 Skill 会覆盖用户级默认。",
+        },
+        {
+          question: "项目配置会影响其他项目吗？",
+          answer: "不会。显式项目设置只对所选项目根目录生效，未设置项继续继承全局默认。",
         },
         {
           question: "应用会直接修改 Codex 配置文件吗？",
@@ -103,13 +110,13 @@ export const copy = {
         },
         {
           question: "目前支持哪些平台？",
-          answer: "首个版本面向 Apple Silicon Mac，构建产物暂未签名或公证。",
+          answer: "v0.2.0 面向 Apple Silicon Mac，构建产物暂未签名或公证。",
         },
       ],
     },
     final: {
       title: "让每个任务只加载需要的 Skill。",
-      body: "从 GitHub 获取源码，或下载 macOS 构建产物开始使用。",
+      body: "从 GitHub 获取源码，或直接下载 v0.2.0 macOS 构建产物。",
       primary: "打开 GitHub",
       secondary: "查看发布版",
     },
@@ -132,23 +139,23 @@ export const copy = {
     },
     hero: {
       title: "Skill Session Profiles",
-      body: "Choose the right skills for each Codex task, then keep that configuration for the tasks that follow.",
+      body: "Configure Codex skills by task or project, then keep each explicit setting scoped to the sessions that follow.",
       primary: "View source",
-      secondary: "Get the macOS app",
+      secondary: "Download v0.2.0",
       imageAlt: "Skill Session Profiles task configuration interface",
     },
     statement: {
-      title: "From global defaults to every task.",
-      body: "Turn skill selection into a reusable, predictable part of your Codex workflow.",
+      title: "From global defaults to every project.",
+      body: "Turn skill selection into reusable profiles with clear, predictable project overrides.",
     },
     capabilities: [
       {
         title: "Task configuration",
-        body: "Choose a base profile for future Codex tasks, then override individual skills when needed.",
+        body: "Choose, create, and manage profiles in one place, then explicitly apply one to future Codex tasks.",
       },
       {
-        title: "Reusable profiles",
-        body: "Save skill combinations for different kinds of work instead of rebuilding them for every conversation.",
+        title: "Project configuration",
+        body: "Choose a target from the Codex project list and save explicit overrides for that project root.",
       },
       {
         title: "Global defaults",
@@ -160,30 +167,33 @@ export const copy = {
       },
     ],
     gallery: {
-      title: "See the configuration and how it applies.",
-      body: "Search, filter, make bulk changes, then save explicit overrides as a reusable profile.",
+      title: "One interface, with every scope made clear.",
+      body: "Manage global profiles or project overrides and inspect each skill before saving.",
       tabs: {
         tasks: "Task configuration",
-        profiles: "Profiles",
+        projects: "Project configuration",
+        profiles: "Profile editor",
         dark: "Dark theme",
       },
       captions: {
-        tasks: "Apply one persistent configuration to future tasks.",
-        profiles: "Manage reusable profiles and explicit overrides.",
+        tasks: "Choose, import, export, or apply profiles directly from Task Configuration.",
+        projects: "Choose a Codex project root and save project-specific overrides.",
+        profiles: "Edit a reusable template while keeping Save Profile and Apply Configuration separate.",
         dark: "Keep the same clear hierarchy in a darker workspace.",
       },
       alts: {
         tasks: "Task configuration interface",
-        profiles: "Profile editor interface",
+        projects: "Codex project configuration interface",
+        profiles: "Profile editor inside Task Configuration",
         dark: "Dark theme task configuration interface",
       },
     },
     workflow: {
-      title: "Configure once. Keep it for future tasks.",
+      title: "Choose the scope. Keep the configuration.",
       items: [
         {
           title: "Discover",
-          body: "Read the user, repository, and system skills currently available to Codex.",
+          body: "Read the Codex project list and the user, repository, and system skills currently available.",
         },
         {
           title: "Compose",
@@ -191,13 +201,13 @@ export const copy = {
         },
         {
           title: "Continue",
-          body: "New, reopened, and forked tasks keep using the profile after it is applied.",
+          body: "Apply a global profile or save project overrides; new, reopened, and forked tasks load the matching scope.",
         },
       ],
     },
     local: {
       title: "Local first, with visible rules.",
-      body: "Configuration writes use Codex App Server APIs and never edit config.toml directly. The project is open source and data stays on your device.",
+      body: "Every write goes through Codex App Server APIs. Profile data stays local, while project overrides are stored in the matching .codex/config.toml.",
       pathLabel: "Local data directory",
       path: "~/.codex/skill-session-profiles",
       source: "Read the implementation",
@@ -211,7 +221,11 @@ export const copy = {
         },
         {
           question: "Does a profile replace global defaults?",
-          answer: "Only for skills explicitly enabled or disabled. Every unset skill continues to inherit global defaults.",
+          answer: "Saving a profile only updates the template. Once selected and applied, only explicitly enabled or disabled skills override user defaults.",
+        },
+        {
+          question: "Can project configuration affect another project?",
+          answer: "No. Explicit project settings apply only to the selected project root. Unset skills continue to inherit global defaults.",
         },
         {
           question: "Does the app edit Codex configuration files?",
@@ -219,13 +233,13 @@ export const copy = {
         },
         {
           question: "Which platforms are supported?",
-          answer: "The first release targets Apple Silicon Mac. Builds are not yet signed or notarized.",
+          answer: "v0.2.0 targets Apple Silicon Mac. Builds are not yet signed or notarized.",
         },
       ],
     },
     final: {
       title: "Load only the skills each task needs.",
-      body: "Explore the source on GitHub or download the latest macOS build.",
+      body: "Explore the source on GitHub or download the v0.2.0 macOS build.",
       primary: "Open GitHub",
       secondary: "View releases",
     },

@@ -238,7 +238,7 @@ p {
 .hero {
   position: relative;
   isolation: isolate;
-  min-height: min(760px, calc(100dvh - 96px));
+  min-height: min(600px, calc(100dvh - 260px));
   overflow: hidden;
   border-bottom: 1px solid var(--hairline);
 }
@@ -829,7 +829,7 @@ p {
   }
 
   .hero {
-    min-height: calc(100dvh - 116px);
+    min-height: calc(100dvh - 324px);
   }
 
   .hero-image {

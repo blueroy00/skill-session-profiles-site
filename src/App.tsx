@@ -14,16 +14,19 @@ import {
 import { copy, type GalleryKey, type Locale } from "./content";
 
 const repositoryUrl = "https://github.com/blueroy00/skill-session-profiles";
-const releasesUrl = `${repositoryUrl}/releases`;
+const releaseUrl = `${repositoryUrl}/releases/tag/v0.2.0`;
+const downloadUrl = `${repositoryUrl}/releases/download/v0.2.0/Skill-Session-Profiles-0.2.0-arm64.dmg`;
 const assetUrl = (path: string) => `${import.meta.env.BASE_URL}${path}`;
 
-const galleryOrder: GalleryKey[] = ["tasks", "profiles", "dark"];
+const galleryOrder: GalleryKey[] = ["tasks", "projects", "profiles", "dark"];
 
 function imageFor(locale: Locale, key: GalleryKey) {
   const language = locale === "zh" ? "zh" : "en";
   const name =
     key === "tasks"
       ? "task-configuration"
+      : key === "projects"
+        ? "project-configuration"
       : key === "profiles"
         ? "profile-editor"
         : "dark-theme";
@@ -156,7 +159,7 @@ function App() {
                 <GithubLogo size={20} weight="fill" />
                 {t.hero.primary}
               </a>
-              <a className="button button-secondary" href={releasesUrl}>
+              <a className="button button-secondary" href={downloadUrl}>
                 <DownloadSimple size={20} />
                 {t.hero.secondary}
               </a>
@@ -287,7 +290,7 @@ function App() {
                 <GithubLogo size={20} weight="fill" />
                 {t.final.primary}
               </a>
-              <a className="button button-outline-light" href={releasesUrl}>
+              <a className="button button-outline-light" href={releaseUrl}>
                 {t.final.secondary}
                 <ArrowUpRight size={18} />
               </a>
