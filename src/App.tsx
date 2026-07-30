@@ -15,6 +15,7 @@ import { copy, type GalleryKey, type Locale } from "./content";
 
 const repositoryUrl = "https://github.com/blueroy00/skill-session-profiles";
 const releasesUrl = `${repositoryUrl}/releases`;
+const assetUrl = (path: string) => `${import.meta.env.BASE_URL}${path}`;
 
 const galleryOrder: GalleryKey[] = ["tasks", "profiles", "dark"];
 
@@ -26,7 +27,7 @@ function imageFor(locale: Locale, key: GalleryKey) {
       : key === "profiles"
         ? "profile-editor"
         : "dark-theme";
-  return `/images/${name}-${language}.png`;
+  return assetUrl(`images/${name}-${language}.png`);
 }
 
 function App() {
@@ -74,7 +75,7 @@ function App() {
 
       <header className="site-header">
         <a className="brand" href="#top" aria-label="Skill Session Profiles">
-          <img src="/images/logo.png" alt="" />
+          <img src={assetUrl("images/logo.png")} alt="" />
           <span>Skill Session Profiles</span>
         </a>
 
@@ -166,7 +167,7 @@ function App() {
         <section className="statement section" id="product">
           <div className="section-inner statement-inner">
             <div className="statement-mark" aria-hidden="true">
-              <img src="/images/logo.png" alt="" />
+              <img src={assetUrl("images/logo.png")} alt="" />
             </div>
             <div>
               <h2>{t.statement.title}</h2>
@@ -298,7 +299,7 @@ function App() {
       <footer className="site-footer">
         <div className="section-inner footer-inner">
           <div className="footer-brand">
-            <img src="/images/logo.png" alt="" />
+            <img src={assetUrl("images/logo.png")} alt="" />
             <div>
               <strong>Skill Session Profiles</strong>
               <span>{t.footer.description}</span>
