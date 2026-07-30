@@ -18,7 +18,7 @@ export const copy = {
       title: "Skill Session Profiles",
       body: "按任务或项目配置 Codex Skill，并让明确的设置在后续会话中持续生效。",
       primary: "查看源码",
-      secondary: "下载 v0.2.0",
+      secondary: "下载 v0.2.1",
       imageAlt: "Skill Session Profiles 任务配置界面",
     },
     statement: {
@@ -110,13 +110,13 @@ export const copy = {
         },
         {
           question: "目前支持哪些平台？",
-          answer: "v0.2.0 面向 Apple Silicon Mac，构建产物暂未签名或公证。",
+          answer: "v0.2.1 面向 Apple Silicon Mac，构建产物暂未签名或公证。",
         },
       ],
     },
     final: {
       title: "让每个任务只加载需要的 Skill。",
-      body: "从 GitHub 获取源码，或直接下载 v0.2.0 macOS 构建产物。",
+      body: "从 GitHub 获取源码，或直接下载 v0.2.1 macOS 构建产物。",
       primary: "打开 GitHub",
       secondary: "查看发布版",
     },
@@ -141,7 +141,7 @@ export const copy = {
       title: "Skill Session Profiles",
       body: "Configure Codex skills by task or project, then keep each explicit setting scoped to the sessions that follow.",
       primary: "View source",
-      secondary: "Download v0.2.0",
+      secondary: "Download v0.2.1",
       imageAlt: "Skill Session Profiles task configuration interface",
     },
     statement: {
@@ -233,13 +233,13 @@ export const copy = {
         },
         {
           question: "Which platforms are supported?",
-          answer: "v0.2.0 targets Apple Silicon Mac. Builds are not yet signed or notarized.",
+          answer: "v0.2.1 targets Apple Silicon Mac. Builds are not yet signed or notarized.",
         },
       ],
     },
     final: {
       title: "Load only the skills each task needs.",
-      body: "Explore the source on GitHub or download the v0.2.0 macOS build.",
+      body: "Explore the source on GitHub or download the v0.2.1 macOS build.",
       primary: "Open GitHub",
       secondary: "View releases",
     },

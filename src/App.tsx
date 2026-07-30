@@ -14,8 +14,8 @@ import {
 import { copy, type GalleryKey, type Locale } from "./content";
 
 const repositoryUrl = "https://github.com/blueroy00/skill-session-profiles";
-const releaseUrl = `${repositoryUrl}/releases/tag/v0.2.0`;
-const downloadUrl = `${repositoryUrl}/releases/download/v0.2.0/Skill-Session-Profiles-0.2.0-arm64.dmg`;
+const releaseUrl = `${repositoryUrl}/releases/tag/v0.2.1`;
+const downloadUrl = `${repositoryUrl}/releases/download/v0.2.1/Skill-Session-Profiles-0.2.1-arm64.dmg`;
 const assetUrl = (path: string) => `${import.meta.env.BASE_URL}${path}`;
 
 const galleryOrder: GalleryKey[] = ["tasks", "projects", "profiles", "dark"];
