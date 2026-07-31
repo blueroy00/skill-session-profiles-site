@@ -358,6 +358,7 @@ p {
 }
 
 .statement h2,
+.demo-copy h2,
 .gallery-copy h2,
 .workflow h2,
 .local-copy h2,
@@ -370,6 +371,7 @@ p {
 }
 
 .statement p,
+.demo-copy p,
 .gallery-copy p,
 .local-copy p,
 .final-cta p {
@@ -378,6 +380,41 @@ p {
   color: var(--ink-secondary);
   font-size: clamp(1.05rem, 1.5vw, 1.25rem);
   line-height: 1.6;
+}
+
+.demo-section {
+  padding: clamp(84px, 10vw, 140px) 0;
+  border-block: 1px solid var(--hairline);
+  background: var(--surface-muted);
+}
+
+.demo-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.7fr) minmax(0, 1.3fr);
+  align-items: center;
+  gap: clamp(44px, 7vw, 110px);
+}
+
+.demo-copy > span {
+  display: block;
+  margin-bottom: 18px;
+  color: var(--command);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.demo-copy h2 {
+  font-size: clamp(2.3rem, 4.2vw, 4.5rem);
+}
+
+.demo-section video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  background: oklch(0.08 0.005 255);
+  box-shadow: 0 8px 8px var(--shadow);
 }
 
 .capability-section {
@@ -864,6 +901,7 @@ p {
   }
 
   .statement-inner,
+  .demo-layout,
   .local-layout,
   .faq-layout,
   .final-layout {
@@ -875,11 +913,16 @@ p {
   }
 
   .statement h2,
+  .demo-copy h2,
   .gallery-copy h2,
   .workflow h2,
   .local-copy h2,
   .final-cta h2 {
     font-size: clamp(2.35rem, 12vw, 3.8rem);
+  }
+
+  .demo-layout {
+    gap: 42px;
   }
 
   .capability-row {

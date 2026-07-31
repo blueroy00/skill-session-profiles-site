@@ -14,8 +14,9 @@ import {
 import { copy, type GalleryKey, type Locale } from "./content";
 
 const repositoryUrl = "https://github.com/blueroy00/skill-session-profiles";
-const releaseUrl = `${repositoryUrl}/releases/tag/v0.2.1`;
-const downloadUrl = `${repositoryUrl}/releases/download/v0.2.1/Skill-Session-Profiles-0.2.1-arm64.dmg`;
+const releaseVersion = "0.3.0";
+const releaseUrl = `${repositoryUrl}/releases/tag/v${releaseVersion}`;
+const downloadUrl = `${repositoryUrl}/releases/download/v${releaseVersion}/Skill-Session-Profiles-${releaseVersion}-arm64.dmg`;
 const assetUrl = (path: string) => `${import.meta.env.BASE_URL}${path}`;
 
 const galleryOrder: GalleryKey[] = ["tasks", "projects", "profiles", "dark"];
@@ -65,6 +66,7 @@ function App() {
 
   const navItems = [
     { label: t.nav.product, href: "#product" },
+    { label: t.nav.demo, href: "#demo" },
     { label: t.nav.workflow, href: "#workflow" },
     { label: t.nav.openSource, href: "#open-source" },
     { label: t.nav.faq, href: "#faq" },
@@ -176,6 +178,28 @@ function App() {
               <h2>{t.statement.title}</h2>
               <p>{t.statement.body}</p>
             </div>
+          </div>
+        </section>
+
+        <section className="demo-section section" id="demo">
+          <div className="section-inner demo-layout">
+            <div className="demo-copy">
+              <span>{t.demo.eyebrow}</span>
+              <h2>{t.demo.title}</h2>
+              <p>{t.demo.body}</p>
+            </div>
+            <video
+              controls
+              playsInline
+              preload="metadata"
+              poster={imageFor(locale, "tasks")}
+              aria-label={t.demo.label}
+            >
+              <source
+                src={assetUrl("media/skill-session-profiles-v0.3.0-demo-zh-CN.mp4")}
+                type="video/mp4"
+              />
+            </video>
           </div>
         </section>
 

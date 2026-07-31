@@ -5,6 +5,7 @@ export const copy = {
   zh: {
     nav: {
       product: "产品",
+      demo: "演示",
       workflow: "工作方式",
       openSource: "开源",
       faq: "常见问题",
@@ -18,12 +19,18 @@ export const copy = {
       title: "Skill Session Profiles",
       body: "按任务或项目配置 Codex Skill，并让明确的设置在后续会话中持续生效。",
       primary: "查看源码",
-      secondary: "下载 v0.2.1",
+      secondary: "下载 v0.3.0",
       imageAlt: "Skill Session Profiles 任务配置界面",
     },
     statement: {
       title: "从全局默认，到每一个项目。",
       body: "把 Skill 选择变成可复用方案，并为具体项目保留清晰、可预测的覆盖。",
+    },
+    demo: {
+      eyebrow: "47 秒产品演示",
+      title: "从任务方案，到项目级 Skill 策略。",
+      body: "查看如何应用任务配置、编辑 Skill 状态，并为 Codex 项目保存独立策略。",
+      label: "Skill Session Profiles v0.3.0 中文产品演示",
     },
     capabilities: [
       {
@@ -39,8 +46,8 @@ export const copy = {
         body: "集中管理默认启用状态，未覆盖的 Skill 始终继承这套规则。",
       },
       {
-        title: "本地共享",
-        body: "独立 macOS 应用与 Codex 插件共用同一份本地配置数据。",
+        title: "独立运行",
+        body: "独立 macOS 应用直接管理本地数据，不依赖 Codex 插件、Hook 或 MCP。",
       },
     ],
     gallery: {
@@ -84,7 +91,7 @@ export const copy = {
     },
     local: {
       title: "本地优先，规则透明。",
-      body: "所有写入都经过 Codex App Server API。方案数据保存在本地，项目覆盖写入对应的 .codex/config.toml。",
+      body: "方案数据保存在本地；项目级 Skill 策略写入 AGENTS.md 或 AGENTS.override.md 的受管区块，并保留现有项目说明。",
       pathLabel: "本地数据目录",
       path: "~/.codex/skill-session-profiles",
       source: "阅读实现",
@@ -106,17 +113,17 @@ export const copy = {
         },
         {
           question: "应用会直接修改 Codex 配置文件吗？",
-          answer: "不会。所有配置操作通过 Codex App Server 契约完成。",
+          answer: "任务方案保存在应用本地数据中。项目级 Skill 策略会写入项目 AGENTS.md 或 AGENTS.override.md 的受管区块，不再写入 .codex/config.toml。",
         },
         {
           question: "目前支持哪些平台？",
-          answer: "v0.2.1 面向 Apple Silicon Mac，构建产物暂未签名或公证。",
+          answer: "v0.3.0 面向 Apple Silicon Mac，构建产物暂未签名或公证。",
         },
       ],
     },
     final: {
       title: "让每个任务只加载需要的 Skill。",
-      body: "从 GitHub 获取源码，或直接下载 v0.2.1 macOS 构建产物。",
+      body: "从 GitHub 获取源码，或直接下载 v0.3.0 macOS 构建产物。",
       primary: "打开 GitHub",
       secondary: "查看发布版",
     },
@@ -128,6 +135,7 @@ export const copy = {
   en: {
     nav: {
       product: "Product",
+      demo: "Demo",
       workflow: "Workflow",
       openSource: "Open source",
       faq: "FAQ",
@@ -141,12 +149,18 @@ export const copy = {
       title: "Skill Session Profiles",
       body: "Configure Codex skills by task or project, then keep each explicit setting scoped to the sessions that follow.",
       primary: "View source",
-      secondary: "Download v0.2.1",
+      secondary: "Download v0.3.0",
       imageAlt: "Skill Session Profiles task configuration interface",
     },
     statement: {
       title: "From global defaults to every project.",
       body: "Turn skill selection into reusable profiles with clear, predictable project overrides.",
+    },
+    demo: {
+      eyebrow: "47-second product demo",
+      title: "From task profiles to project skill policies.",
+      body: "See how to apply a task profile, edit skill states, and save a dedicated policy for a Codex project.",
+      label: "Skill Session Profiles v0.3.0 product demo in Chinese",
     },
     capabilities: [
       {
@@ -162,8 +176,8 @@ export const copy = {
         body: "Manage default states in one place. Skills without an override always inherit these rules.",
       },
       {
-        title: "Shared locally",
-        body: "The standalone macOS app and Codex plugin use the same local configuration data.",
+        title: "Standalone",
+        body: "The standalone macOS app manages local data directly, without a Codex plugin, hook, or MCP server.",
       },
     ],
     gallery: {
@@ -207,7 +221,7 @@ export const copy = {
     },
     local: {
       title: "Local first, with visible rules.",
-      body: "Every write goes through Codex App Server APIs. Profile data stays local, while project overrides are stored in the matching .codex/config.toml.",
+      body: "Profile data stays local. Project skill policies use a managed block in AGENTS.md or AGENTS.override.md while preserving existing project guidance.",
       pathLabel: "Local data directory",
       path: "~/.codex/skill-session-profiles",
       source: "Read the implementation",
@@ -229,17 +243,17 @@ export const copy = {
         },
         {
           question: "Does the app edit Codex configuration files?",
-          answer: "No. Every configuration write goes through the Codex App Server contract.",
+          answer: "Task profiles stay in the app's local data. Project skill policies are written to a managed AGENTS.md or AGENTS.override.md block instead of .codex/config.toml.",
         },
         {
           question: "Which platforms are supported?",
-          answer: "v0.2.1 targets Apple Silicon Mac. Builds are not yet signed or notarized.",
+          answer: "v0.3.0 targets Apple Silicon Mac. Builds are not yet signed or notarized.",
         },
       ],
     },
     final: {
       title: "Load only the skills each task needs.",
-      body: "Explore the source on GitHub or download the v0.2.1 macOS build.",
+      body: "Explore the source on GitHub or download the v0.3.0 macOS build.",
       primary: "Open GitHub",
       secondary: "View releases",
     },
