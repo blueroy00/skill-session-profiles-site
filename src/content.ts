@@ -132,7 +132,7 @@ export const copy = {
     },
     footer: {
       description: "Codex Skill 配置管理工具",
-      license: "MIT License",
+      license: "GPL-3.0-only",
     },
   },
   en: {
@@ -265,7 +265,7 @@ export const copy = {
     },
     footer: {
       description: "Codex skill configuration manager",
-      license: "MIT License",
+      license: "GPL-3.0-only",
     },
   },
 } as const;
