@@ -1,22 +1,24 @@
 import { useEffect, useState } from "react";
 import {
+  AppleLogo,
   ArrowUpRight,
   Check,
-  DownloadSimple,
   GithubLogo,
   List,
   Moon,
   SlidersHorizontal,
   StackSimple,
   Sun,
+  WindowsLogo,
   X,
 } from "@phosphor-icons/react";
 import { copy, type GalleryKey, type Locale } from "./content";
 
 const repositoryUrl = "https://github.com/blueroy00/skill-session-profiles";
-const releaseVersion = "0.3.0";
+const releaseVersion = "0.3.3";
 const releaseUrl = `${repositoryUrl}/releases/tag/v${releaseVersion}`;
-const downloadUrl = `${repositoryUrl}/releases/download/v${releaseVersion}/Skill-Session-Profiles-${releaseVersion}-arm64.dmg`;
+const macDownloadUrl = `${repositoryUrl}/releases/download/v${releaseVersion}/Skill-Session-Profiles-${releaseVersion}-arm64.dmg`;
+const windowsDownloadUrl = `${repositoryUrl}/releases/download/v${releaseVersion}/Skill-Session-Profiles-${releaseVersion}-x64.exe`;
 const assetUrl = (path: string) => `${import.meta.env.BASE_URL}${path}`;
 
 const galleryOrder: GalleryKey[] = ["tasks", "projects", "profiles", "dark"];
@@ -161,11 +163,16 @@ function App() {
                 <GithubLogo size={20} weight="fill" />
                 {t.hero.primary}
               </a>
-              <a className="button button-secondary" href={downloadUrl}>
-                <DownloadSimple size={20} />
-                {t.hero.secondary}
+              <a className="button button-secondary" href={macDownloadUrl}>
+                <AppleLogo size={20} weight="fill" />
+                {t.hero.macDownload}
+              </a>
+              <a className="button button-secondary" href={windowsDownloadUrl}>
+                <WindowsLogo size={20} weight="fill" />
+                {t.hero.windowsDownload}
               </a>
             </div>
+            <p className="platform-note">{t.hero.platformNote}</p>
           </div>
         </section>
 
@@ -310,12 +317,16 @@ function App() {
               <p>{t.final.body}</p>
             </div>
             <div className="final-actions">
-              <a className="button button-light" href={repositoryUrl}>
-                <GithubLogo size={20} weight="fill" />
-                {t.final.primary}
+              <a className="button button-light" href={macDownloadUrl}>
+                <AppleLogo size={20} weight="fill" />
+                {t.final.macDownload}
               </a>
-              <a className="button button-outline-light" href={releaseUrl}>
-                {t.final.secondary}
+              <a className="button button-light" href={windowsDownloadUrl}>
+                <WindowsLogo size={20} weight="fill" />
+                {t.final.windowsDownload}
+              </a>
+              <a className="release-link" href={releaseUrl}>
+                {t.final.release}
                 <ArrowUpRight size={18} />
               </a>
             </div>

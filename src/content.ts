@@ -19,7 +19,9 @@ export const copy = {
       title: "Skill Session Profiles",
       body: "按任务或项目配置 Codex Skill，并让明确的设置在后续会话中持续生效。",
       primary: "查看源码",
-      secondary: "下载 v0.3.0",
+      macDownload: "下载 macOS",
+      windowsDownload: "下载 Windows",
+      platformNote: "v0.3.3 · Apple Silicon · Windows x64",
       imageAlt: "Skill Session Profiles 任务配置界面",
     },
     statement: {
@@ -27,7 +29,7 @@ export const copy = {
       body: "把 Skill 选择变成可复用方案，并为具体项目保留清晰、可预测的覆盖。",
     },
     demo: {
-      eyebrow: "47 秒产品演示",
+      eyebrow: "47 秒界面演示 · 录制于 v0.3.0",
       title: "从任务方案，到项目级 Skill 策略。",
       body: "查看如何应用任务配置、编辑 Skill 状态，并为 Codex 项目保存独立策略。",
       label: "Skill Session Profiles v0.3.0 中文产品演示",
@@ -47,7 +49,7 @@ export const copy = {
       },
       {
         title: "独立运行",
-        body: "独立 macOS 应用直接管理本地数据，不依赖 Codex 插件、Hook 或 MCP。",
+        body: "macOS 与 Windows 桌面应用直接管理本地数据，不依赖 Codex 插件、Hook 或 MCP。",
       },
     ],
     gallery: {
@@ -117,15 +119,16 @@ export const copy = {
         },
         {
           question: "目前支持哪些平台？",
-          answer: "v0.3.0 面向 Apple Silicon Mac，构建产物暂未签名或公证。",
+          answer: "v0.3.3 支持 Apple Silicon Mac 和 Windows x64。两个平台的构建产物均未签名，macOS 产物尚未公证。",
         },
       ],
     },
     final: {
       title: "让每个任务只加载需要的 Skill。",
-      body: "从 GitHub 获取源码，或直接下载 v0.3.0 macOS 构建产物。",
-      primary: "打开 GitHub",
-      secondary: "查看发布版",
+      body: "选择你的平台，下载 v0.3.3 桌面应用。",
+      macDownload: "macOS · Apple Silicon",
+      windowsDownload: "Windows · x64",
+      release: "查看 v0.3.3 发布说明",
     },
     footer: {
       description: "Codex Skill 配置管理工具",
@@ -149,7 +152,9 @@ export const copy = {
       title: "Skill Session Profiles",
       body: "Configure Codex skills by task or project, then keep each explicit setting scoped to the sessions that follow.",
       primary: "View source",
-      secondary: "Download v0.3.0",
+      macDownload: "Download macOS",
+      windowsDownload: "Download Windows",
+      platformNote: "v0.3.3 · Apple Silicon · Windows x64",
       imageAlt: "Skill Session Profiles task configuration interface",
     },
     statement: {
@@ -157,7 +162,7 @@ export const copy = {
       body: "Turn skill selection into reusable profiles with clear, predictable project overrides.",
     },
     demo: {
-      eyebrow: "47-second product demo",
+      eyebrow: "47-second UI demo · recorded on v0.3.0",
       title: "From task profiles to project skill policies.",
       body: "See how to apply a task profile, edit skill states, and save a dedicated policy for a Codex project.",
       label: "Skill Session Profiles v0.3.0 product demo in Chinese",
@@ -177,7 +182,7 @@ export const copy = {
       },
       {
         title: "Standalone",
-        body: "The standalone macOS app manages local data directly, without a Codex plugin, hook, or MCP server.",
+        body: "The macOS and Windows desktop apps manage local data directly, without a Codex plugin, hook, or MCP server.",
       },
     ],
     gallery: {
@@ -247,15 +252,16 @@ export const copy = {
         },
         {
           question: "Which platforms are supported?",
-          answer: "v0.3.0 targets Apple Silicon Mac. Builds are not yet signed or notarized.",
+          answer: "v0.3.3 supports Apple Silicon Mac and Windows x64. Both builds are unsigned, and the macOS build is not notarized.",
         },
       ],
     },
     final: {
       title: "Load only the skills each task needs.",
-      body: "Explore the source on GitHub or download the v0.3.0 macOS build.",
-      primary: "Open GitHub",
-      secondary: "View releases",
+      body: "Choose your platform and download the v0.3.3 desktop app.",
+      macDownload: "macOS · Apple Silicon",
+      windowsDownload: "Windows · x64",
+      release: "View v0.3.3 release notes",
     },
     footer: {
       description: "Codex skill configuration manager",
